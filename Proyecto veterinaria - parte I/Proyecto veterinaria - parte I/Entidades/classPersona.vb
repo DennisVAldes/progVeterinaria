@@ -4,11 +4,11 @@
     Private _dir As String
     Private _tel As Integer
 
-    Public Sub altaPersona(ci, name, dir, tel)
-        ci = Me._ci
-        name = Me._name
-        dir = Me._dir
-        tel = Me._tel
+    Public Sub altaPersona(ci_ As Integer, name_ As String, dir_ As String, tel_ As Integer)
+        ci = ci_
+        name = name_
+        dir = dir_
+        tel = tel_
     End Sub
 
     Public Sub altaPersona()

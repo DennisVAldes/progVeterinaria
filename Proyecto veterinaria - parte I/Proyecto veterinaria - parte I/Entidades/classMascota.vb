@@ -3,10 +3,10 @@
     Private _añoNacimiento As Integer
     Private _ciDueño As Integer
 
-    Public Sub altaMascota(name, añoNacimiento, ciDueño)
-        name = Me._name
-        añoNacimiento = Me._añoNacimiento
-        ciDueño = Me._ciDueño
+    Public Sub altaMascota(name_ As String, añoNacimiento As Integer, ciDueño As Integer)
+        name = name_
+        añoNacimiento = añoNacimiento_
+        ciDueño = ciDueño_
     End Sub
 
     Public Sub altaMascota()
