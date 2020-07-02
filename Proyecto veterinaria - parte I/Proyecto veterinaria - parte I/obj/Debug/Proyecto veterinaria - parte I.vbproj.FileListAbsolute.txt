@@ -12,3 +12,17 @@ C:\Users\Alumno\source\repos\Proyecto veterinaria - parte I\Proyecto veterinaria
 C:\Users\Alumno\source\repos\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaPersona.resources
 C:\Users\Alumno\source\repos\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaMascota.resources
 C:\Users\Alumno\source\repos\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.inicio.resources
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.exe.config
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.exe
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.pdb
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.xml
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbprojAssemblyReference.cache
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaPersona.resources
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaMascota.resources
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.inicio.resources
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.Resources.resources
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.GenerateResource.cache
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.CoreCompileInputs.cache
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.exe
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.xml
+C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.pdb

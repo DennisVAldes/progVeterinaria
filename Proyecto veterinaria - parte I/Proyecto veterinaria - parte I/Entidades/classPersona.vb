@@ -1,14 +1,14 @@
 ﻿Public Class classPersona
-    Dim name As String
-    Dim ci As Integer
-    Dim dir As String
-    Dim tel As Integer
+    Private name_ As String
+    Private ci_ As Integer
+    Private dir_ As String
+    Private tel_ As Integer
 
     Public Sub altaPersona(ci, name, dir, tel)
-        ci = Me.ci
-        name = Me.name
-        dir = Me.dir
-        tel = Me.tel
+        ci = Me.ci_
+        name = Me.name_
+        dir = Me.dir_
+        tel = Me.tel_
     End Sub
 
     Public Sub altaPersona()

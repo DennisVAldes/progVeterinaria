@@ -1,12 +1,12 @@
 ﻿Public Class classMascota
-    Dim name As String
-    Dim añoNacimiento As Integer
-    Dim ciDueño As Integer
+    Private name_ As String
+    Private añoNacimiento_ As Integer
+    Private ciDueño_ As Integer
 
     Public Sub altaMascota(name, añoNacimiento, ciDueño)
-        name = Me.name
-        añoNacimiento = Me.añoNacimiento
-        ciDueño = Me.ciDueño
+        name = Me.name_
+        añoNacimiento = Me.añoNacimiento_
+        ciDueño = Me.ciDueño_
     End Sub
 
     Public Sub altaMascota()
