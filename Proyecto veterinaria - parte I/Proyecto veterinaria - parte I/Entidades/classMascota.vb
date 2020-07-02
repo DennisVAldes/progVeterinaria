@@ -1,17 +1,27 @@
 ﻿Public Class classMascota
+    Private _id As Integer
     Private _name As String
     Private _añoNacimiento As Integer
-    Private _ciDueño As Integer
+    Private _dueño As classPersona
 
-    Public Sub altaMascota(name_ As String, añoNacimiento As Integer, ciDueño As Integer)
+    Public Sub altaMascota(name_ As String, añoNacimiento_ As Integer, dueño_ As classPersona)
         name = name_
         añoNacimiento = añoNacimiento_
-        ciDueño = ciDueño_
+        dueño = dueño_
     End Sub
 
     Public Sub altaMascota()
 
     End Sub
+
+    Public Property id As Integer
+        Get
+            Return _id
+        End Get
+        Set(value As Integer)
+            _id = value
+        End Set
+    End Property
 
     Public Property name As String
         Get
@@ -31,12 +41,12 @@
         End Set
     End Property
 
-    Public Property ciDueño As Integer
+    Public Property dueño As classPersona
         Get
-            Return _ciDueño
+            Return _dueño
         End Get
-        Set(value As Integer)
-            _ciDueño = value
+        Set(value As classPersona)
+            _dueño = value
         End Set
     End Property
 
