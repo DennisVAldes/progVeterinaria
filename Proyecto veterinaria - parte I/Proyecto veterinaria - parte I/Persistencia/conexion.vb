@@ -13,6 +13,9 @@ Public Class conexion
             throw ex
             
         End Try
+        
+        Return conn
+        
     End Function
 
 End Class
