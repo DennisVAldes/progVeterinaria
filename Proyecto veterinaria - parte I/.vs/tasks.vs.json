@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskName": "task-Proyecto veterinaria - parte I",
+      "appliesTo": "/",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-conexion",
+      "appliesTo": "Proyecto veterinaria - parte I/Persistencia/conexion.vb",
+      "type": "launch"
+    },
+    {
+      "taskName": "task-Proyecto veterinaria - parte I",
+      "appliesTo": "Proyecto veterinaria - parte I/",
+      "type": "launch"
+    }
+  ]
+}
