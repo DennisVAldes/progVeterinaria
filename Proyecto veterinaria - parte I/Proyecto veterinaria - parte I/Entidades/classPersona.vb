@@ -15,7 +15,7 @@
 
     End Sub
 
-    Public Property name As String
+    Public Property Name As String
         Get
             Return _name
         End Get
@@ -24,7 +24,7 @@
         End Set
     End Property
 
-    Public Property ci As Integer
+    Public Property Ci As Integer
         Get
             Return _ci
         End Get
@@ -33,7 +33,7 @@
         End Set
     End Property
 
-    Public Property dir As String
+    Public Property Dir As String
         Get
             Return _dir
         End Get
