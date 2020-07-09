@@ -12,7 +12,10 @@ Public Class persistenciaPersona
 
         dim cmd as New Npgsql.NpgsqlCommand
         cmd.Connection = localConn
-        cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value
+            
+            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Ci
+            cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Nombre
+            cmd.Parameters.Add("@direccion", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Direccion
       catch ex as exception
         throw ex
     end sub
