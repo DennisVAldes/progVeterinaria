@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Proyecto veterinaria - parte I",
-    "\\Proyecto veterinaria - parte I\\Persistencia"
+    "\\Proyecto veterinaria - parte I\\Entidades",
+    "\\Proyecto veterinaria - parte I\\Logica"
   ],
-  "SelectedNode": "\\Proyecto veterinaria - parte I\\Persistencia\\persistenciaMascota.vb",
+  "SelectedNode": "\\Proyecto veterinaria - parte I\\bin",
   "PreviewInSolutionExplorer": false
 }

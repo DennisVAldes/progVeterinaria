@@ -26,3 +26,13 @@ C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proye
 C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.exe
 C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.xml
 C:\Users\elde3\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.pdb
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbprojAssemblyReference.cache
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaPersona.resources
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.altaMascota.resources
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.inicio.resources
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.Resources.resources
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.GenerateResource.cache
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.CoreCompileInputs.cache
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.exe
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.pdb
