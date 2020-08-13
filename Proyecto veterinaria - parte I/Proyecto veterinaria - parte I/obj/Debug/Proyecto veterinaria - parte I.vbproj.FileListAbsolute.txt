@@ -36,3 +36,28 @@ C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.exe
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.xml
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.pdb
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.exe.config
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.exe
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.pdb
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Proyecto veterinaria - parte I.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Npgsql.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Buffers.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Memory.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Text.Json.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.ValueTuple.dll
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\Npgsql.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Buffers.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Memory.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Text.Json.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.ValueTuple.xml
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.CopyComplete

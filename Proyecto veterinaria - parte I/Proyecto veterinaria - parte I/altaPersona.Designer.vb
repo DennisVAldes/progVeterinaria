@@ -32,8 +32,9 @@ Partial Class altaPersona
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.output = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnPlusTelefono = New System.Windows.Forms.Button()
+        Me.listTelefonos = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
         '
         'Label1
@@ -73,6 +74,7 @@ Partial Class altaPersona
         Me.inTell.Name = "inTell"
         Me.inTell.Size = New System.Drawing.Size(262, 20)
         Me.inTell.TabIndex = 4
+        Me.inTell.Text = "  "
         '
         'Label2
         '
@@ -119,15 +121,6 @@ Partial Class altaPersona
         Me.Button1.Text = "Aceptar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'output
-        '
-        Me.output.AutoSize = True
-        Me.output.Location = New System.Drawing.Point(454, 173)
-        Me.output.Name = "output"
-        Me.output.Size = New System.Drawing.Size(39, 13)
-        Me.output.TabIndex = 10
-        Me.output.Text = "Output"
-        '
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(32, 349)
@@ -137,13 +130,33 @@ Partial Class altaPersona
         Me.Button2.Text = "Cancelar"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'btnPlusTelefono
+        '
+        Me.btnPlusTelefono.Location = New System.Drawing.Point(324, 284)
+        Me.btnPlusTelefono.Name = "btnPlusTelefono"
+        Me.btnPlusTelefono.Size = New System.Drawing.Size(106, 27)
+        Me.btnPlusTelefono.TabIndex = 12
+        Me.btnPlusTelefono.Text = "+"
+        Me.btnPlusTelefono.UseVisualStyleBackColor = True
+        '
+        'listTelefonos
+        '
+        Me.listTelefonos.HideSelection = False
+        Me.listTelefonos.Location = New System.Drawing.Point(458, 284)
+        Me.listTelefonos.Name = "listTelefonos"
+        Me.listTelefonos.Size = New System.Drawing.Size(256, 158)
+        Me.listTelefonos.TabIndex = 13
+        Me.listTelefonos.UseCompatibleStateImageBehavior = False
+        Me.listTelefonos.View = System.Windows.Forms.View.List
+        '
         'altaPersona
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(624, 451)
+        Me.ClientSize = New System.Drawing.Size(726, 498)
+        Me.Controls.Add(Me.listTelefonos)
+        Me.Controls.Add(Me.btnPlusTelefono)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.output)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
@@ -171,6 +184,7 @@ Partial Class altaPersona
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents output As Label
     Friend WithEvents Button2 As Button
+    Friend WithEvents btnPlusTelefono As Button
+    Friend WithEvents listTelefonos As ListView
 End Class

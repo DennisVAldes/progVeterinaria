@@ -125,6 +125,7 @@
     <Compile Include="inicio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logica\logicaPersona.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -141,9 +142,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Persistencia\conn.vb" />
-    <Compile Include="Persistencia\persMascotas.vb" />
-    <Compile Include="Persistencia\persPersonas.vb" />
+    <Compile Include="Persistencia\conexion.vb" />
+    <Compile Include="Persistencia\persistenciaMascota.vb" />
+    <Compile Include="Persistencia\persistenciaPersona.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="altaPersona.resx">
@@ -178,8 +179,6 @@
     <None Include="packages.config" />
     <None Include="Resources\dog-cat-logo-template-veterinary_56473-118.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

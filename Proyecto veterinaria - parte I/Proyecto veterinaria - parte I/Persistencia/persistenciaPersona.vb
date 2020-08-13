@@ -5,20 +5,37 @@ Public Class persistenciaPersona
     Public Sub altaPersona(newPersona As classPersona)
         Try
             Dim conn = New Conexion
-            localConn = conn.initConn
+            localConn = conn.InitConn
             Dim cadenaDeComandos As String
 
             cadenaDeComandos = "insert into persona(ci, nombre, direccion) values (@ci, @nombre, @direccion);"
 
             Dim cmd As New Npgsql.NpgsqlCommand
+            cmd.CommandText = cadenaDeComandos
             cmd.Connection = localConn
 
             cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Ci
-            cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Nombre
+            cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Name
             cmd.Parameters.Add("@direccion", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Dir
 
             Dim res As Integer
             res = cmd.ExecuteNonQuery()
+
+            If res = 1 Then
+                Dim i = 0
+                While i < newPersona.Telefonos.Count
+
+                    cadenaDeComandos = "insert into telefonos (personaCi, telefono) values (@ci, @telefono)"
+
+                    cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Ci
+                    cmd.Parameters.Add("@telefono", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Telefonos.Item(i)
+
+                    res = cmd.ExecuteNonQuery()
+
+                    i += 1
+                End While
+            End If
+
         Catch ex As Exception
             Throw ex
 
@@ -29,7 +46,7 @@ Public Class persistenciaPersona
         Dim newPersona As classPersona
         Try
             Dim ClaseSnl As New Conexion
-            localConn = ClaseSnl.initConn
+            localConn = ClaseSnl.InitConn
             Dim cmd As Npgsql.NpgsqlCommand
             cmd.Connection = localConn
 

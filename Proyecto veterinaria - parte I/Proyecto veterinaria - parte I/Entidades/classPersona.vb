@@ -2,13 +2,13 @@
     Private _name As String
     Private _ci As Integer
     Private _dir As String
-    Private _tel As Integer
+    Private _telefonos As List(Of Integer)
 
-    Public Sub altaPersona(ci_ As Integer, name_ As String, dir_ As String, tel_ As Integer)
-        ci = ci_
-        name = name_
-        dir = dir_
-        tel = tel_
+    Public Sub altaPersona(ci_ As Integer, name_ As String, dir_ As String, tel_ As List(Of Integer))
+        Ci = ci_
+        Name = name_
+        Dir = dir_
+        Telefonos = tel_
     End Sub
 
     Public Sub altaPersona()
@@ -42,12 +42,12 @@
         End Set
     End Property
 
-    Public Property tel As Integer
+    Public Property Telefonos As List(Of Integer)
         Get
-            Return _tel
+            Return _telefonos
         End Get
-        Set(value As Integer)
-            _tel = value
+        Set(value As List(Of Integer))
+            _telefonos = value
         End Set
     End Property
 
