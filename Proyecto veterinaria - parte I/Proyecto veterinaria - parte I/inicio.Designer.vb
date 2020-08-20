@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class inicio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,13 @@ Partial Class inicio
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.altaPersonaMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarPersonaMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.MascotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -51,9 +53,22 @@ Partial Class inicio
         '
         'PersonaToolStripMenuItem
         '
+        Me.PersonaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.altaPersonaMenu, Me.ModificarPersonaMenu})
         Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
         Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.PersonaToolStripMenuItem.Text = "Persona"
+        '
+        'altaPersonaMenu
+        '
+        Me.altaPersonaMenu.Name = "altaPersonaMenu"
+        Me.altaPersonaMenu.Size = New System.Drawing.Size(180, 22)
+        Me.altaPersonaMenu.Text = "Alta"
+        '
+        'ModificarPersonaMenu
+        '
+        Me.ModificarPersonaMenu.Name = "ModificarPersonaMenu"
+        Me.ModificarPersonaMenu.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarPersonaMenu.Text = "Modificar"
         '
         'MascotaToolStripMenuItem
         '
@@ -84,4 +99,6 @@ Partial Class inicio
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents PersonaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MascotaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents altaPersonaMenu As ToolStripMenuItem
+    Friend WithEvents ModificarPersonaMenu As ToolStripMenuItem
 End Class
