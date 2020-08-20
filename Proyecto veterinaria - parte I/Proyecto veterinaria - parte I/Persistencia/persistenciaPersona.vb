@@ -85,7 +85,14 @@ Public Class persistenciaPersona
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
             If Lector.HasRows Then
-                Lector.Read()
+                While Lector.Read()
+                    Dim user As New classPersona
+                    user.Ci = Convert.ToInt32(Lector(0).ToString)
+                    user.Name = Lector(1).ToString
+                    user.Dir = Lector(2).ToString
+
+                    list.Add(user)
+                End While
             End If
         Catch ex As Exception
             Throw ex

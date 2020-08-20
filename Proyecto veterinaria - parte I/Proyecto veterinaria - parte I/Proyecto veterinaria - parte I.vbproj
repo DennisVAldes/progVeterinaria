@@ -60,6 +60,7 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="Entidades\classMascota.vb" />
     <Compile Include="Entidades\classPersona.vb" />
+    <Compile Include="usersList.Designer.vb">
+      <DependentUpon>usersList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usersList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inicio.Designer.vb">
       <DependentUpon>inicio.vb</DependentUpon>
     </Compile>
@@ -161,6 +168,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usersList.resx">
+      <DependentUpon>usersList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -26,6 +26,8 @@ Partial Class usersList
         Me.DirectorySearcher1 = New System.DirectoryServices.DirectorySearcher()
         Me.searchUser = New System.Windows.Forms.TextBox()
         Me.btnSearchUser = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.users = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'CheckedListBox1
@@ -58,11 +60,28 @@ Partial Class usersList
         Me.btnSearchUser.Text = "Buscar ci"
         Me.btnSearchUser.UseVisualStyleBackColor = True
         '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.users})
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(12, 92)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(332, 305)
+        Me.ListView1.TabIndex = 4
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'users
+        '
+        Me.users.Text = "Usuarios"
+        Me.users.Width = 339
+        '
         'usersList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.btnSearchUser)
         Me.Controls.Add(Me.searchUser)
         Me.Controls.Add(Me.CheckedListBox1)
@@ -76,4 +95,6 @@ Partial Class usersList
     Friend WithEvents DirectorySearcher1 As DirectoryServices.DirectorySearcher
     Friend WithEvents searchUser As TextBox
     Friend WithEvents btnSearchUser As Button
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents users As ColumnHeader
 End Class
