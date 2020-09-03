@@ -36,4 +36,35 @@
 
         inTell.Text = ""
     End Sub
+
+    Private Sub listTelefonos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listTelefonos.SelectedIndexChanged
+        Try
+            Dim telefonoEscrito As String
+            Dim telefonoEliminado As String
+
+            telefonoEscrito = listTelefonos.SelectedItems(0).SubItems(0).Text
+            telefonoEliminado = Convert.ToInt32(telefonoEscrito)
+
+            Dim i As Integer = 0
+
+            While i < listaTelefonos.Count
+                If listaTelefonos.Item(i) = telefonoEliminado Then
+                    listaTelefonos.Remove(telefonoEliminado)
+                    i = listaTelefonos.Count
+                End If
+                i = i + 1
+            End While
+
+            listTelefonos.Clear()
+            i = 0
+
+            While listaTelefonos.Count > i
+                listTelefonos.Items.Add(listaTelefonos.Item(i))
+                i = i + 1
+            End While
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class

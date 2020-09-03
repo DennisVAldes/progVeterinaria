@@ -61,3 +61,4 @@ C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\bin\Debug\System.ValueTuple.xml
 C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto veterinaria - parte I.vbproj.CopyComplete
+C:\Users\December Labs\source\repos\progVeterinaria\Proyecto veterinaria - parte I\Proyecto veterinaria - parte I\obj\Debug\Proyecto_veterinaria___parte_I.usersList.resources

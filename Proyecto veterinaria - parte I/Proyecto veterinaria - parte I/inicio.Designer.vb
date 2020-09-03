@@ -61,13 +61,13 @@ Partial Class inicio
         'altaPersonaMenu
         '
         Me.altaPersonaMenu.Name = "altaPersonaMenu"
-        Me.altaPersonaMenu.Size = New System.Drawing.Size(180, 22)
+        Me.altaPersonaMenu.Size = New System.Drawing.Size(125, 22)
         Me.altaPersonaMenu.Text = "Alta"
         '
         'ModificarPersonaMenu
         '
         Me.ModificarPersonaMenu.Name = "ModificarPersonaMenu"
-        Me.ModificarPersonaMenu.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarPersonaMenu.Size = New System.Drawing.Size(125, 22)
         Me.ModificarPersonaMenu.Text = "Modificar"
         '
         'MascotaToolStripMenuItem
@@ -86,7 +86,7 @@ Partial Class inicio
         Me.Controls.Add(Me.PictureBox1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "inicio"
-        Me.Text = "Inicio"
+        Me.Text = "2"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

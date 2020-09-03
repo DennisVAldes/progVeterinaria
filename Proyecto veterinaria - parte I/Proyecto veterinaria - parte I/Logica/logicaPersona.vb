@@ -8,7 +8,7 @@ Public Class LogicaPersona
     Public Function getPersona(ci As Integer) As classPersona
         Dim persistencia = New persistenciaPersona
 
-        Return persistencia.getPersona(ci)
+        Return persistencia.getUserByCi(ci)
 
     End Function
 
