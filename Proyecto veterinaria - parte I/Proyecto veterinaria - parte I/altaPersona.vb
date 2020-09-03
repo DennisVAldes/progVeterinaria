@@ -67,4 +67,15 @@
 
         End Try
     End Sub
+
+    Private Sub inCi_TextChanged(sender As Object, e As EventArgs) Handles inCi.TextChanged
+        Dim logica As New LogicaPersona
+
+        Dim newPersona As New classPersona
+        newPersona = logica.getPersona(inCi.Text)
+
+        inName.Text = newPersona.Name
+        inAddress.Text = newPersona.Dir
+
+    End Sub
 End Class
