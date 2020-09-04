@@ -62,6 +62,20 @@ Public Class persistenciaPersona
                 newPersona.Name = Lector(1).ToString
                 newPersona.Dir = Lector(2).ToString
             End If
+
+            Lector.Close()
+
+            cadenaDeComandos = "select * from telefono where personaci = @ci"
+            cmd.CommandText = cadenaDeComandos
+            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
+            Lector = cmd.ExecuteReader
+
+            If Lector.HasRows Then
+                Lector.Read()
+                newPersona.Telefonos = Lector(0)
+            End If
+
+            Lector.Close()
         Catch ex As Exception
             Throw ex
         Finally
@@ -69,38 +83,6 @@ Public Class persistenciaPersona
         End Try
 
         Return newPersona
-    End Function
-
-    Public Function getUsers() As List(Of classPersona)
-        Dim list As New List(Of classPersona)
-        Try
-            Dim conn As New Conexion
-            localConn = conn.InitConn
-            Dim cmd As New Npgsql.NpgsqlCommand
-            cmd.Connection = localConn
-
-            Dim cadenaDeComandos = "select * from persona"
-            cmd.CommandText = cadenaDeComandos
-
-            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
-
-            If Lector.HasRows Then
-                While Lector.Read()
-                    Dim user As New classPersona
-                    user.Ci = Convert.ToInt32(Lector(0).ToString)
-                    user.Name = Lector(1).ToString
-                    user.Dir = Lector(2).ToString
-
-                    list.Add(user)
-                End While
-            End If
-        Catch ex As Exception
-            Throw ex
-        Finally
-            localConn.close
-        End Try
-
-        Return list
     End Function
 
     Public Sub updatePersona(newPersona As classPersona)
