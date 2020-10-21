@@ -2,7 +2,7 @@ Public Class persistenciaPersona
 
     Dim localConn = New Npgsql.NpgsqlConnection
 
-    Public Sub altaPersona(newPersona As classPersona)
+    Public Function altaPersona(newPersona As classPersona)
         Try
             Dim conn As New Conexion
             localConn = conn.InitConn
@@ -21,26 +21,11 @@ Public Class persistenciaPersona
             Dim res As Integer
             res = cmd.ExecuteNonQuery()
 
-            If res = 1 Then
-                Dim i = 0
-                While i < newPersona.Telefonos.Count
-
-                    cadenaDeComandos = "insert into telefono (personaci, telefono) values (@ci, @telefono)"
-                    cmd.CommandText = cadenaDeComandos
-                    cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Ci
-                    cmd.Parameters.Add("@telefono", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Telefonos.Item(i)
-
-                    res = cmd.ExecuteNonQuery()
-
-                    i += 1
-                End While
-            End If
-
         Catch ex As Exception
             Throw ex
 
         End Try
-    End Sub
+    End Function
 
     Public Function getUserByCi(ci As Integer) As classPersona
         Dim newPersona As New classPersona

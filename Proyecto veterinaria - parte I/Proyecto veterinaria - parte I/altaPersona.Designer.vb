@@ -31,8 +31,8 @@ Partial Class altaPersona
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.submitUser = New System.Windows.Forms.Button()
+        Me.closeWindow = New System.Windows.Forms.Button()
         Me.btnPlusTelefono = New System.Windows.Forms.Button()
         Me.listTelefonos = New System.Windows.Forms.ListView()
         Me.SuspendLayout()
@@ -112,23 +112,23 @@ Partial Class altaPersona
         Me.Label5.TabIndex = 7
         Me.Label5.Text = "Direccion"
         '
-        'Button1
+        'submitUser
         '
-        Me.Button1.Location = New System.Drawing.Point(180, 349)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 48)
-        Me.Button1.TabIndex = 9
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.submitUser.Location = New System.Drawing.Point(180, 349)
+        Me.submitUser.Name = "submitUser"
+        Me.submitUser.Size = New System.Drawing.Size(114, 48)
+        Me.submitUser.TabIndex = 9
+        Me.submitUser.Text = "Aceptar"
+        Me.submitUser.UseVisualStyleBackColor = True
         '
-        'Button2
+        'closeWindow
         '
-        Me.Button2.Location = New System.Drawing.Point(32, 349)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(121, 48)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.closeWindow.Location = New System.Drawing.Point(32, 349)
+        Me.closeWindow.Name = "closeWindow"
+        Me.closeWindow.Size = New System.Drawing.Size(121, 48)
+        Me.closeWindow.TabIndex = 11
+        Me.closeWindow.Text = "Cancelar"
+        Me.closeWindow.UseVisualStyleBackColor = True
         '
         'btnPlusTelefono
         '
@@ -156,8 +156,8 @@ Partial Class altaPersona
         Me.ClientSize = New System.Drawing.Size(726, 498)
         Me.Controls.Add(Me.listTelefonos)
         Me.Controls.Add(Me.btnPlusTelefono)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.closeWindow)
+        Me.Controls.Add(Me.submitUser)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
@@ -183,8 +183,8 @@ Partial Class altaPersona
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents submitUser As Button
+    Friend WithEvents closeWindow As Button
     Friend WithEvents btnPlusTelefono As Button
     Friend WithEvents listTelefonos As ListView
 End Class

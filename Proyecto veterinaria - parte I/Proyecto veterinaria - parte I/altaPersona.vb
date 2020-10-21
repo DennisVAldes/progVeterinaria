@@ -2,28 +2,36 @@
 
     Dim listaTelefonos As New List(Of Integer)
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim nameP As String
-        nameP = inName.Text
+    Private Sub submitUser_Click(sender As Object, e As EventArgs) Handles submitUser.Click
+        Try
+            Dim nameP As String
+            nameP = inName.Text
 
-        Dim ci As Integer
-        ci = CInt(inCi.Text)
+            Dim ci As Integer
+            ci = inCi.Text
 
-        Dim address As String
-        address = inAddress.Text
+            Dim address As String
+            address = inAddress.Text
 
-        Dim persona As New classPersona()
-        persona.Ci = ci
-        persona.Name = nameP
-        persona.Dir = address
-        persona.Telefonos = listaTelefonos
+            Dim persona As New classPersona()
+            persona.Ci = ci
+            persona.Name = nameP
+            persona.Dir = address
+            persona.Telefonos = listaTelefonos
 
-        Dim logica = New LogicaPersona
-        logica.altaPersona(persona)
+            Dim logica = New LogicaPersona
+            logica.altaPersona(persona)
+
+            MessageBox.Show("Usuario y telefonos ingresados correctamente!")
+
+            Me.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub closeWindow_Click(sender As Object, e As EventArgs) Handles closeWindow.Click
         Me.Close()
     End Sub
 

@@ -120,6 +120,7 @@
     </Compile>
     <Compile Include="Entidades\classMascota.vb" />
     <Compile Include="Entidades\classPersona.vb" />
+    <Compile Include="Persistencia\persistenciaTelefono.vb" />
     <Compile Include="usersList.Designer.vb">
       <DependentUpon>usersList.vb</DependentUpon>
     </Compile>
