@@ -20,4 +20,11 @@ Public Class LogicaPersona
 
     End Function
 
+    Public Function getPersonas() As List(Of classPersona)
+        Dim persistencia = New persistenciaPersona
+
+        Return persistencia.getUsers
+
+
+    End Function
 End Class

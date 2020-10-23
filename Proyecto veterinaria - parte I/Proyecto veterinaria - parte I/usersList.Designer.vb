@@ -27,7 +27,9 @@ Partial Class usersList
         Me.searchUser = New System.Windows.Forms.TextBox()
         Me.btnSearchUser = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.users = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Ci = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Nombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Dir = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'CheckedListBox1
@@ -62,19 +64,14 @@ Partial Class usersList
         '
         'ListView1
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.users})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Ci, Me.Nombre, Me.Dir})
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 92)
+        Me.ListView1.Location = New System.Drawing.Point(12, 100)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(332, 305)
+        Me.ListView1.Size = New System.Drawing.Size(399, 319)
         Me.ListView1.TabIndex = 4
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
-        '
-        'users
-        '
-        Me.users.Text = "Usuarios"
-        Me.users.Width = 339
         '
         'usersList
         '
@@ -96,5 +93,7 @@ Partial Class usersList
     Friend WithEvents searchUser As TextBox
     Friend WithEvents btnSearchUser As Button
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents users As ColumnHeader
+    Friend WithEvents Ci As ColumnHeader
+    Friend WithEvents Nombre As ColumnHeader
+    Friend WithEvents Dir As ColumnHeader
 End Class

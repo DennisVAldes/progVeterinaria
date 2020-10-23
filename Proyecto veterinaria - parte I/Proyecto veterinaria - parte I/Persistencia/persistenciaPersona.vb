@@ -109,4 +109,39 @@ Public Class persistenciaPersona
 
         End Try
     End Sub
+
+    Public Function getUsers() As List(Of classPersona)
+        Dim personas As New List(Of classPersona)
+        Try
+            Dim conn As New Conexion
+            localConn = conn.InitConn
+            Dim cmd As New Npgsql.NpgsqlCommand
+            cmd.Connection = localConn
+
+            Dim cadenaDeComandos = "select * from persona"
+            cmd.CommandText = cadenaDeComandos
+
+            Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
+
+            If Lector.HasRows Then
+                While Lector.Read()
+                    Dim persona = New classPersona With {
+                        .Ci = Convert.ToInt32(Lector(0).ToString),
+                        .Name = Lector(1).ToString,
+                        .Dir = Lector(2).ToString
+                    }
+
+                    personas.Add(persona)
+                End While
+            End If
+
+            Lector.Close()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            localConn.close
+        End Try
+
+        Return personas
+    End Function
 End Class
