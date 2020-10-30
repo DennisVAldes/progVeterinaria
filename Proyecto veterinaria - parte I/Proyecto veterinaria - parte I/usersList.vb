@@ -20,4 +20,8 @@
     Private Sub btnSearchUser_Click(sender As Object, e As EventArgs) Handles btnSearchUser.Click
         LISTAR()
     End Sub
+
+    Private Sub onLoad(sender As Object, e As EventArgs) Handles Me.Load
+        LISTAR()
+    End Sub
 End Class

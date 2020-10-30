@@ -22,6 +22,7 @@ Partial Class inicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(inicio))
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -34,10 +35,10 @@ Partial Class inicio
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.Proyecto_veterinaria___parte_I.My.Resources.Resources.dog_cat_logo_template_veterinary_56473_118
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(-3, -89)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(626, 626)
+        Me.PictureBox1.Size = New System.Drawing.Size(731, 535)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
@@ -84,9 +85,13 @@ Partial Class inicio
         Me.ClientSize = New System.Drawing.Size(624, 451)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.PictureBox1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(640, 490)
+        Me.MinimumSize = New System.Drawing.Size(640, 490)
         Me.Name = "inicio"
-        Me.Text = "2"
+        Me.Text = "Home"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()

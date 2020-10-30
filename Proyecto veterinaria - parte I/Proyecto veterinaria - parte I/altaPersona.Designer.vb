@@ -167,6 +167,9 @@ Partial Class altaPersona
         Me.Controls.Add(Me.inName)
         Me.Controls.Add(Me.inCi)
         Me.Controls.Add(Me.Label1)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(742, 537)
+        Me.MinimumSize = New System.Drawing.Size(742, 537)
         Me.Name = "altaPersona"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
