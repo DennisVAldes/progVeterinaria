@@ -36,13 +36,17 @@
     End Sub
 
     Private Sub btnPlusTelefono_Click(sender As Object, e As EventArgs) Handles btnPlusTelefono.Click
-        Dim telefono As Integer
-        telefono = inTell.Text
+        Try
+            Dim telefono As Integer
+            telefono = inTell.Text
 
-        listTelefonos.Items.Add(telefono)
-        listaTelefonos.Add(telefono)
+            listTelefonos.Items.Add(telefono)
+            listaTelefonos.Add(telefono)
 
-        inTell.Text = ""
+            inTell.Text = ""
+        Catch ex As Exception
+            Throw ex
+        End Try
     End Sub
 
     Private Sub listTelefonos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles listTelefonos.SelectedIndexChanged
@@ -72,18 +76,41 @@
             End While
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message)
         End Try
     End Sub
 
     Private Sub inCi_TextChanged(sender As Object, e As EventArgs) Handles inCi.TextChanged
-        Dim logica As New LogicaPersona
+        Try
+            Dim logica As New LogicaPersona
 
-        Dim newPersona As New classPersona
-        newPersona = logica.getPersona(inCi.Text)
+            Dim personaExists = logica.checkIfPersonExists(inCi.Text)
 
-        inName.Text = newPersona.Name
-        inAddress.Text = newPersona.Dir
+            If personaExists Then
+                inAddress.Enabled = False
+                inTell.Enabled = False
+                inName.Enabled = False
+                submitUser.Enabled = False
+                MessageBox.Show("Ya existe un usuario registrado con esta ci, intente nuevamente")
+                inCi.Text = ""
+            Else
+                inAddress.Enabled = True
+                inTell.Enabled = True
+                inName.Enabled = True
+                submitUser.Enabled = True
+            End If
 
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
+    End Sub
+
+    Private Sub onLoad(sender As Object, e As EventArgs) Handles Me.Load
+        inAddress.Enabled = False
+        inTell.Enabled = False
+        inName.Enabled = False
+        submitUser.Enabled = False
     End Sub
 End Class
