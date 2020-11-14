@@ -13,25 +13,19 @@
             If logicaPersona.checkIfPersonExists(ciPersona) Then
                 persona = persistenciaPersona.getUserByCi(ciPersona)
 
-                If logicaMascota.checkMascota(Convert.ToInt32(inIdMascota.Text)) Then
-                    MessageBox.Show("La id ya esta registrada")
-                    inName.Text = ""
-                    inIdMascota.Text = ""
-                    inFecha.Text = ""
-                    inCi.Text = ""
+                mascota.name = inName.Text
+                mascota.dueño = persona
+                mascota.añoNacimiento = Convert.ToInt32(inFecha.Text)
 
-                Else
-                    mascota.name = inName.Text
-                    mascota.dueño = persona
-                    mascota.id = Convert.ToInt32(inIdMascota.Text)
-                    mascota.añoNacimiento = Convert.ToInt32(inFecha.Text)
+                logicaMascota.altaMascota(mascota)
 
-                    logicaMascota.altaMascota(mascota)
-                End If
+                MessageBox.Show("Mascota registrada")
+                inName.Text = ""
+                inFecha.Text = ""
+                inCi.Text = ""
             Else
                 MessageBox.Show("No hay persona relacionada a la ci ingresada")
                 inName.Text = ""
-                inIdMascota.Text = ""
                 inFecha.Text = ""
                 inCi.Text = ""
             End If
