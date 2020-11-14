@@ -24,7 +24,7 @@ Partial Class usersList
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(usersList))
         Me.DirectorySearcher1 = New System.DirectoryServices.DirectorySearcher()
-        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ListPersonas = New System.Windows.Forms.ListView()
         Me.Ci = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Nombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Dir = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -39,6 +39,9 @@ Partial Class usersList
         Me.btnPlusTelefono = New System.Windows.Forms.Button()
         Me.inTell = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.resetTelsList = New System.Windows.Forms.Button()
+        Me.updatePersona = New System.Windows.Forms.Button()
+        Me.deletePersona = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'DirectorySearcher1
@@ -47,16 +50,16 @@ Partial Class usersList
         Me.DirectorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01")
         Me.DirectorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01")
         '
-        'ListView1
+        'ListPersonas
         '
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Ci, Me.Nombre, Me.Dir})
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(12, 40)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(389, 335)
-        Me.ListView1.TabIndex = 4
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        Me.ListView1.View = System.Windows.Forms.View.Details
+        Me.ListPersonas.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.Ci, Me.Nombre, Me.Dir})
+        Me.ListPersonas.HideSelection = False
+        Me.ListPersonas.Location = New System.Drawing.Point(12, 40)
+        Me.ListPersonas.Name = "ListPersonas"
+        Me.ListPersonas.Size = New System.Drawing.Size(389, 509)
+        Me.ListPersonas.TabIndex = 4
+        Me.ListPersonas.UseCompatibleStateImageBehavior = False
+        Me.ListPersonas.View = System.Windows.Forms.View.Details
         '
         'Ci
         '
@@ -167,11 +170,44 @@ Partial Class usersList
         Me.Label5.TabIndex = 17
         Me.Label5.Text = "Telefono"
         '
+        'resetTelsList
+        '
+        Me.resetTelsList.Location = New System.Drawing.Point(743, 350)
+        Me.resetTelsList.Name = "resetTelsList"
+        Me.resetTelsList.Size = New System.Drawing.Size(226, 26)
+        Me.resetTelsList.TabIndex = 18
+        Me.resetTelsList.Text = "Eliminar lista"
+        Me.resetTelsList.UseVisualStyleBackColor = True
+        '
+        'updatePersona
+        '
+        Me.updatePersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.updatePersona.Location = New System.Drawing.Point(563, 414)
+        Me.updatePersona.Name = "updatePersona"
+        Me.updatePersona.Size = New System.Drawing.Size(137, 43)
+        Me.updatePersona.TabIndex = 19
+        Me.updatePersona.Text = "Modificar"
+        Me.updatePersona.UseVisualStyleBackColor = True
+        '
+        'deletePersona
+        '
+        Me.deletePersona.BackColor = System.Drawing.Color.Red
+        Me.deletePersona.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.deletePersona.Location = New System.Drawing.Point(437, 414)
+        Me.deletePersona.Name = "deletePersona"
+        Me.deletePersona.Size = New System.Drawing.Size(120, 43)
+        Me.deletePersona.TabIndex = 20
+        Me.deletePersona.Text = "Eliminar"
+        Me.deletePersona.UseVisualStyleBackColor = False
+        '
         'usersList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(984, 561)
+        Me.Controls.Add(Me.deletePersona)
+        Me.Controls.Add(Me.updatePersona)
+        Me.Controls.Add(Me.resetTelsList)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.listTelefonos)
         Me.Controls.Add(Me.btnPlusTelefono)
@@ -183,7 +219,7 @@ Partial Class usersList
         Me.Controls.Add(Me.nombreModificar)
         Me.Controls.Add(Me.ciModificar)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListView1)
+        Me.Controls.Add(Me.ListPersonas)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(1000, 600)
@@ -195,7 +231,7 @@ Partial Class usersList
 
     End Sub
     Friend WithEvents DirectorySearcher1 As DirectoryServices.DirectorySearcher
-    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ListPersonas As ListView
     Friend WithEvents Ci As ColumnHeader
     Friend WithEvents Nombre As ColumnHeader
     Friend WithEvents Dir As ColumnHeader
@@ -210,4 +246,7 @@ Partial Class usersList
     Friend WithEvents btnPlusTelefono As Button
     Friend WithEvents inTell As TextBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents resetTelsList As Button
+    Friend WithEvents updatePersona As Button
+    Friend WithEvents deletePersona As Button
 End Class

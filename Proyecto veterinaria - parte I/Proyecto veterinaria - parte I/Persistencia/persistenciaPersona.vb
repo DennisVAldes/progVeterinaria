@@ -2,7 +2,7 @@ Public Class persistenciaPersona
 
     Dim localConn = New Npgsql.NpgsqlConnection
 
-    Public Function altaPersona(newPersona As classPersona)
+    Public Sub altaPersona(newPersona As classPersona)
         Try
             Dim conn As New Conexion
             localConn = conn.InitConn
@@ -18,26 +18,31 @@ Public Class persistenciaPersona
             cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Name
             cmd.Parameters.Add("@direccion", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Dir
 
-            Dim res As Integer
-            res = cmd.ExecuteNonQuery()
+            cmd.ExecuteNonQuery()
 
         Catch ex As Exception
             Throw ex
-
+        Finally
+            localConn.close
         End Try
-    End Function
+    End Sub
 
     Public Function getUserByCi(ci As Integer) As classPersona
-        Dim newPersona As New classPersona
         Try
             Dim conn As New Conexion
             localConn = conn.InitConn
+
+            Dim newPersona As New classPersona
+
             Dim cmd As New Npgsql.NpgsqlCommand
             cmd.Connection = localConn
 
             Dim cadenaDeComandos = "select * from persona where ci = @ci"
             cmd.CommandText = cadenaDeComandos
+
             cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
+
+            cmd.ExecuteNonQuery()
 
             Dim Lector As Npgsql.NpgsqlDataReader = cmd.ExecuteReader
 
@@ -50,24 +55,13 @@ Public Class persistenciaPersona
 
             Lector.Close()
 
-            cadenaDeComandos = "select * from telefono where personaci = @ci"
-            cmd.CommandText = cadenaDeComandos
-            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
-            Lector = cmd.ExecuteReader
+            Return newPersona
 
-            If Lector.HasRows Then
-                Lector.Read()
-                newPersona.Telefonos = Lector(0)
-            End If
-
-            Lector.Close()
         Catch ex As Exception
             Throw ex
         Finally
             localConn.close
         End Try
-
-        Return newPersona
     End Function
 
     Public Sub updatePersona(newPersona As classPersona)
@@ -76,7 +70,7 @@ Public Class persistenciaPersona
             localConn = conn.InitConn
             Dim cadenaDeComandos As String
 
-            cadenaDeComandos = "UPDATE TABLE persona(ci, nombre, direccion) values (@ci, @nombre, @direccion);"
+            cadenaDeComandos = "UPDATE persona SET ci = @ci, nombre = @nombre, direccion = @direccion  where ci = @ci"
 
             Dim cmd As New Npgsql.NpgsqlCommand
             cmd.CommandText = cadenaDeComandos
@@ -86,33 +80,19 @@ Public Class persistenciaPersona
             cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Name
             cmd.Parameters.Add("@direccion", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newPersona.Dir
 
-            Dim res As Integer
-            res = cmd.ExecuteNonQuery()
-
-            If res = 1 Then
-                Dim i = 0
-                While i < newPersona.Telefonos.Count
-
-                    cadenaDeComandos = "insert into telefono (personaci, telefono) values (@ci, @telefono)"
-                    cmd.CommandText = cadenaDeComandos
-                    cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Ci
-                    cmd.Parameters.Add("@telefono", NpgsqlTypes.NpgsqlDbType.Integer).Value = newPersona.Telefonos.Item(i)
-
-                    res = cmd.ExecuteNonQuery()
-
-                    i += 1
-                End While
-            End If
+            cmd.ExecuteNonQuery()
 
         Catch ex As Exception
             Throw ex
-
+        Finally
+            localConn.close
         End Try
     End Sub
 
     Public Function getUsers() As List(Of classPersona)
-        Dim personas As New List(Of classPersona)
         Try
+            Dim personas As New List(Of classPersona)
+
             Dim conn As New Conexion
             localConn = conn.InitConn
             Dim cmd As New Npgsql.NpgsqlCommand
@@ -136,12 +116,31 @@ Public Class persistenciaPersona
             End If
 
             Lector.Close()
+
+            Return personas
         Catch ex As Exception
             Throw ex
         Finally
             localConn.close
         End Try
-
-        Return personas
     End Function
+
+    Public Sub deletePersona(ci As Integer)
+        Try
+            Dim conn As New Conexion
+            localConn = conn.InitConn
+            Dim cmd As New Npgsql.NpgsqlCommand
+            cmd.Connection = localConn
+
+            Dim cadenaDeComandos = "DELETE FROM persona where ci = @ci"
+            cmd.CommandText = cadenaDeComandos
+            cmd.Parameters.Add("@ci", NpgsqlTypes.NpgsqlDbType.Integer).Value = ci
+
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            localConn.close
+        End Try
+    End Sub
 End Class

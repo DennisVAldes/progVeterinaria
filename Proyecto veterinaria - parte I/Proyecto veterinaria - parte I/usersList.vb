@@ -3,9 +3,17 @@
     Dim listaTelefonos As New List(Of Integer)
 
     Public Sub LISTAR()
+        ciModificar.Text = ""
+        nombreModificar.Text = ""
+        direccionModificar.Text = ""
+        inTell.Text = ""
+
+        listaTelefonos.Clear()
+        listTelefonos.Items.Clear()
+
         Dim users = logicaPersona.getPersonas
         Dim array(3) As String
-        ListView1.Items.Clear()
+        ListPersonas.Items.Clear()
         For i As Integer = 0 To users.Count - 1
             array(0) = Convert.ToString(users(i).Ci)
             array(1) = users(i).Name
@@ -13,7 +21,7 @@
 
             Dim item As New ListViewItem(array)
 
-            ListView1.Items.Add(item)
+            ListPersonas.Items.Add(item)
         Next
 
     End Sub
@@ -28,7 +36,8 @@
 
             inTell.Text = ""
         Catch ex As Exception
-            Throw ex
+            MessageBox.Show(ex.Message)
+
         End Try
     End Sub
 
@@ -63,9 +72,10 @@
         End Try
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+    Private Sub ListPersonas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListPersonas.SelectedIndexChanged
         Dim ciSelected As Integer
-        ciSelected = Convert.ToInt32(ListView1.FocusedItem.SubItems(0).Text)
+        ciSelected = Convert.ToInt32(ListPersonas.FocusedItem.SubItems(0).Text)
+
         ciModificar.Enabled = True
         nombreModificar.Enabled = True
         direccionModificar.Enabled = True
@@ -74,18 +84,39 @@
 
         Try
             Dim userSelected As New classPersona
+            Dim telefonos As New List(Of Integer)
 
             userSelected = logicaPersona.getPersona(ciSelected)
 
             ciModificar.Text = userSelected.Ci
             nombreModificar.Text = userSelected.Name
             direccionModificar.Text = userSelected.Dir
+            telefonos = userSelected.Telefonos
 
-            System.Console.WriteLine(userSelected.Telefonos)
+            listaTelefonos.Clear()
+            listTelefonos.Items.Clear()
+
+            Dim i As Integer = 0
+
+            While i < telefonos.Count
+                Dim tel As New Integer
+                tel = telefonos(i)
+
+                listaTelefonos.Add(tel)
+                listTelefonos.Items.Add(tel)
+
+                i += 1
+            End While
 
         Catch ex As Exception
+            MessageBox.Show(ex.Message)
 
         End Try
+    End Sub
+
+    Private Sub resetTelsList_Click(sender As Object, e As EventArgs) Handles resetTelsList.Click
+        listaTelefonos.Clear()
+        listTelefonos.Items.Clear()
     End Sub
 
     Private Sub onLoad(sender As Object, e As EventArgs) Handles Me.Load
@@ -96,5 +127,38 @@
         btnPlusTelefono.Enabled = False
 
         LISTAR()
+    End Sub
+
+    Private Sub updatePersona_Click(sender As Object, e As EventArgs) Handles updatePersona.Click
+        Try
+            Dim persona As New classPersona
+
+            persona.Ci = Convert.ToInt32(ciModificar.Text)
+            persona.Name = nombreModificar.Text
+            persona.Dir = direccionModificar.Text
+            persona.Telefonos = listaTelefonos
+
+            logicaPersona.updatePersona(persona)
+            LISTAR()
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Sub
+
+    Private Sub deletePersona_Click(sender As Object, e As EventArgs) Handles deletePersona.Click
+        Try
+            Dim ci As Integer
+            ci = Convert.ToInt32(ciModificar.Text)
+
+            logicaPersona.deletePersona(ci)
+            LISTAR()
+
+            MessageBox.Show("Persona eliminada correctamente")
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+        End Try
     End Sub
 End Class
