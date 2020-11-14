@@ -29,9 +29,10 @@ Partial Class altaMascota
         Me.labe12 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.output = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.submitMascota = New System.Windows.Forms.Button()
+        Me.closeWindow = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.inIdMascota = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -53,7 +54,7 @@ Partial Class altaMascota
         '
         'inName
         '
-        Me.inName.Location = New System.Drawing.Point(58, 215)
+        Me.inName.Location = New System.Drawing.Point(58, 244)
         Me.inName.Name = "inName"
         Me.inName.Size = New System.Drawing.Size(319, 20)
         Me.inName.TabIndex = 2
@@ -77,7 +78,7 @@ Partial Class altaMascota
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(59, 197)
+        Me.Label2.Location = New System.Drawing.Point(59, 226)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(87, 13)
         Me.Label2.TabIndex = 5
@@ -88,45 +89,53 @@ Partial Class altaMascota
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(59, 284)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 13)
+        Me.Label3.Size = New System.Drawing.Size(80, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Fecha nacimiento"
+        Me.Label3.Text = "Año nacimiento"
         '
-        'Button1
+        'submitMascota
         '
-        Me.Button1.Location = New System.Drawing.Point(219, 370)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(148, 38)
-        Me.Button1.TabIndex = 7
-        Me.Button1.Text = "Aceptar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.submitMascota.Location = New System.Drawing.Point(219, 370)
+        Me.submitMascota.Name = "submitMascota"
+        Me.submitMascota.Size = New System.Drawing.Size(148, 38)
+        Me.submitMascota.TabIndex = 7
+        Me.submitMascota.Text = "Aceptar"
+        Me.submitMascota.UseVisualStyleBackColor = True
         '
-        'output
+        'closeWindow
         '
-        Me.output.AutoSize = True
-        Me.output.Location = New System.Drawing.Point(474, 178)
-        Me.output.Name = "output"
-        Me.output.Size = New System.Drawing.Size(39, 13)
-        Me.output.TabIndex = 8
-        Me.output.Text = "Output"
+        Me.closeWindow.Location = New System.Drawing.Point(62, 370)
+        Me.closeWindow.Name = "closeWindow"
+        Me.closeWindow.Size = New System.Drawing.Size(148, 38)
+        Me.closeWindow.TabIndex = 9
+        Me.closeWindow.Text = "Cancelar"
+        Me.closeWindow.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Label4
         '
-        Me.Button2.Location = New System.Drawing.Point(62, 370)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(148, 38)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(59, 171)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(59, 13)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Id mascota"
+        '
+        'inIdMascota
+        '
+        Me.inIdMascota.Location = New System.Drawing.Point(58, 192)
+        Me.inIdMascota.Name = "inIdMascota"
+        Me.inIdMascota.Size = New System.Drawing.Size(319, 20)
+        Me.inIdMascota.TabIndex = 10
         '
         'altaMascota
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(624, 451)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.output)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.inIdMascota)
+        Me.Controls.Add(Me.closeWindow)
+        Me.Controls.Add(Me.submitMascota)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.labe12)
@@ -148,7 +157,8 @@ Partial Class altaMascota
     Friend WithEvents labe12 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents output As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents submitMascota As Button
+    Friend WithEvents closeWindow As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents inIdMascota As TextBox
 End Class

@@ -3,14 +3,6 @@
     Dim listaTelefonos As New List(Of Integer)
 
     Public Sub LISTAR()
-        ciModificar.Text = ""
-        nombreModificar.Text = ""
-        direccionModificar.Text = ""
-        inTell.Text = ""
-
-        listaTelefonos.Clear()
-        listTelefonos.Items.Clear()
-
         Dim users = logicaPersona.getPersonas
         Dim array(3) As String
         ListPersonas.Items.Clear()
@@ -119,7 +111,7 @@
         listTelefonos.Items.Clear()
     End Sub
 
-    Private Sub onLoad(sender As Object, e As EventArgs) Handles Me.Load
+    Private Sub OnLoad(sender As Object, e As EventArgs) Handles Me.Load
         ciModificar.Enabled = False
         nombreModificar.Enabled = False
         direccionModificar.Enabled = False

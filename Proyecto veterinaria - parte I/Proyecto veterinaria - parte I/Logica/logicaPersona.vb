@@ -15,25 +15,6 @@ Public Class LogicaPersona
         End Try
     End Sub
 
-    Public Function getPersona(ci As Integer) As classPersona
-        Try
-            Dim persona As New classPersona
-            Dim telefonos As New List(Of Integer)
-
-            Dim persistenciaPersona As New persistenciaPersona
-            Dim persistenciaTel As New persistenciaTelefono
-
-            persona = persistenciaPersona.getUserByCi(ci)
-            telefonos = persistenciaTel.getTelefonos(ci)
-
-            persona.Telefonos = telefonos
-
-            Return persona
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-    End Function
-
     Public Function checkIfPersonExists(ci As Integer)
         Try
             Dim persistencia = New persistenciaPersona
@@ -50,14 +31,29 @@ Public Class LogicaPersona
         End Try
     End Function
 
+    Public Function getPersona(ci As Integer)
+        Try
+            Dim persistencia = New persistenciaPersona
+            Dim persona As New classPersona
+            persona = persistencia.getUserByCi(ci)
+
+            Return persona
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
     Public Function getPersonas()
+        Dim personas As New List(Of classPersona)
         Try
             Dim persistencia As New persistenciaPersona
 
-            Return persistencia.getUsers
+            personas = persistencia.getUsers
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
+
+        Return personas
     End Function
 
     Public Sub updatePersona(persona As classPersona)
