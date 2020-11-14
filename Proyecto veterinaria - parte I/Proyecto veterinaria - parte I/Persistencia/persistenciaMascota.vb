@@ -75,7 +75,7 @@ Public Class persistenciaMascota
             localConn = conn.InitConn
             Dim cadenaDeComandos As String
 
-            cadenaDeComandos = "UPDATE mascotas SET id = @id, nombre = @nombre, añonacimiento = @añonacimiento, personaci = @personaci where id = @id"
+            cadenaDeComandos = "UPDATE mascotas SET nombre = @nombre, añonacimiento = @añonacimiento, cipersona = @cipersona where id = @id"
 
             Dim cmd As New Npgsql.NpgsqlCommand
             cmd.CommandText = cadenaDeComandos
@@ -83,8 +83,8 @@ Public Class persistenciaMascota
 
             cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = newMascota.id
             cmd.Parameters.Add("@nombre", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newMascota.name
-            cmd.Parameters.Add("@añonacimiento", NpgsqlTypes.NpgsqlDbType.Varchar, 100).Value = newMascota.añoNacimiento
-            cmd.Parameters.Add("@personaci", NpgsqlTypes.NpgsqlDbType.Integer).Value = newMascota.dueño.Ci
+            cmd.Parameters.Add("@añonacimiento", NpgsqlTypes.NpgsqlDbType.Integer).Value = newMascota.añoNacimiento
+            cmd.Parameters.Add("@cipersona", NpgsqlTypes.NpgsqlDbType.Integer).Value = newMascota.dueño.Ci
 
             cmd.ExecuteNonQuery()
 
@@ -136,16 +136,16 @@ Public Class persistenciaMascota
         End Try
     End Function
 
-    Public Sub deleteMascota(personaci As Integer)
+    Public Sub deleteMascota(id As Integer)
         Try
             Dim conn As New Conexion
             localConn = conn.InitConn
             Dim cmd As New Npgsql.NpgsqlCommand
             cmd.Connection = localConn
 
-            Dim cadenaDeComandos = "DELETE FROM mascotas where personaci = @personaci"
+            Dim cadenaDeComandos = "DELETE FROM mascotas where id = @id"
             cmd.CommandText = cadenaDeComandos
-            cmd.Parameters.Add("@personaci", NpgsqlTypes.NpgsqlDbType.Integer).Value = personaci
+            cmd.Parameters.Add("@id", NpgsqlTypes.NpgsqlDbType.Integer).Value = id
 
             cmd.ExecuteNonQuery()
         Catch ex As Exception

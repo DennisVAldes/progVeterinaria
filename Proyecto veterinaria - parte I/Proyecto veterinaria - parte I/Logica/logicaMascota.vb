@@ -58,10 +58,8 @@
     Public Sub updateMascota(mascota As classMascota)
         Try
             Dim persistenciaMascota As New persistenciaMascota
-            Dim persistenciaTel As New persistenciaTelefono
 
             persistenciaMascota.updateMascota(mascota)
-
         Catch ex As Exception
             Throw ex
         End Try

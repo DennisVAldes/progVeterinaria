@@ -120,6 +120,12 @@
     </Compile>
     <Compile Include="Entidades\classMascota.vb" />
     <Compile Include="Entidades\classPersona.vb" />
+    <Compile Include="modificarMascota.Designer.vb">
+      <DependentUpon>modificarMascota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modificarMascota.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Logica\logicaMascota.vb" />
     <Compile Include="Persistencia\persistenciaTelefono.vb" />
     <Compile Include="usersList.Designer.vb">
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="altaMascota.resx">
       <DependentUpon>altaMascota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificarMascota.resx">
+      <DependentUpon>modificarMascota.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inicio.resx">
       <DependentUpon>inicio.vb</DependentUpon>

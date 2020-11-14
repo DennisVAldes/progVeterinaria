@@ -29,6 +29,8 @@ Partial Class inicio
         Me.altaPersonaMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarPersonaMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.MascotaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AltaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -73,9 +75,22 @@ Partial Class inicio
         '
         'MascotaToolStripMenuItem
         '
+        Me.MascotaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AltaToolStripMenuItem, Me.ModificarToolStripMenuItem})
         Me.MascotaToolStripMenuItem.Name = "MascotaToolStripMenuItem"
         Me.MascotaToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.MascotaToolStripMenuItem.Text = "Mascota"
+        '
+        'AltaToolStripMenuItem
+        '
+        Me.AltaToolStripMenuItem.Name = "AltaToolStripMenuItem"
+        Me.AltaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AltaToolStripMenuItem.Text = "Alta"
+        '
+        'ModificarToolStripMenuItem
+        '
+        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
+        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ModificarToolStripMenuItem.Text = "Modificar"
         '
         'inicio
         '
@@ -106,4 +121,6 @@ Partial Class inicio
     Friend WithEvents MascotaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents altaPersonaMenu As ToolStripMenuItem
     Friend WithEvents ModificarPersonaMenu As ToolStripMenuItem
+    Friend WithEvents AltaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
 End Class
